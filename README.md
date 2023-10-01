@@ -10,3 +10,8 @@ Una vez ingresado correctamente los datos,se sale del ciclo do while y comienza 
 Tipo de entrada x cantidad, esta cuenta se guarda en la variable precioParcial(para mostrar en consola) y ademas se le suma al Precio total, ya que en caso de que se quiera comprar mas de un tipo de entrada, se acumulará en la variable precioTotal.
 
 Tambien se agregó una funcion para saber si el usuario quiere seguir comprando otras entradas o finalizar la operacion, contemplando que el usuario igrese una opcion incorrecta y vuelva a ejecutarse la funcion.
+
+
+Usuarios creados para ingresar mediante el switch:
+    usuario:juan password:321
+    usuario:pepe password:hola
