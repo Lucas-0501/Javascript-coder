@@ -1,6 +1,14 @@
 # Repositorio Javascript ----> Lucas Aguero
 Sitio en Github pages: https://lucas-0501.github.io/Javascript-coder/
 
+## Pre entrega 2 
+* En esta entrega se añadio un objeto donde se almacena el tipo de entrada y el precio
+* Se reemplazo el switch para determinar cuanto vale el ticket dependiendo de cada entrada por un while donde usa el objeto "entradas", para calcular el precio
+* Una vez que se calcule el precio de la entrada y se guarde en la variable precioTickets, se lo va a pushear en un array que sera donde se almacenen los tickets agregados al carrito
+* Cuando el usuario decide terminar la compra, se utiliza el metodo reduce para el array "carrito[]", donde sumara todos los elementos del array y los almacenara en la variable "precioTotal"
+* Por ultimo utilizando "document.getElementById('totalCarrito').textContent" se podra mostrar en el html el valor total del carrito.
+
+
 ## Pre entrega 1
 En esta entrega se utilizaron condicionales SWITCH e IF, ciclos WHILE y DO WHILE
 
