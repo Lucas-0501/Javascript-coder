@@ -6,12 +6,19 @@ let password;
 let login = false;
 let tipoEntrada;
 let cantEntrada;
-let precioTotal = 0; //uso variables PrecioTotal y PrecioParcial, en caso de que quiera comprar 2 tipos de entradas diferentes, entonces precioTotal acumula los precios parciales
+let precioTotal; 
+let precioTickets;
 let terminar = false;
 let continuar;
+let carrito = [];// array para despues sumar los precios de los tickets
 
-do{ //hago un do while para que si elige un usuario que no existe vuelva a empezar el ciclo y le pida otra vez que ingrese un usuario
-    // en caso de que ingrese un usuario correcto el login pasa a ser TRUE y puede salir del ciclo
+const entradas = {  //uso objeto para el tipo de entradas y su precio
+    1: { nombre: "Campo General", precio: 10000 },
+    2: { nombre: "Campo Vip", precio: 15000 },
+    3: { nombre: "Platea", precio: 18000 },
+};
+
+do{ 
     let usuario = prompt("Ingresar usuario");
     switch (usuario) { // uso un switch para que cada usuario tenga una validacion con contraseñas diferentes
         case "pepe":
@@ -49,52 +56,32 @@ if (continuar === "1") {
     continuarValidacion();
 }
 }
-
-
 while(terminar != true){
-    let precioParcial = 0;
     tipoEntrada = prompt("Presione 1 si quiere comprar Campo general: 10000$ \nPresione 2 si quiere comprar Campo Vip: 15000$ \nPresione 3 si quiere comprar Platea: Platea: 18000$");
-    switch(tipoEntrada){
-        case "1": 
-            cantEntrada = parseInt(prompt(`Cuantas entradas Campo General quieres comprar?`)); // uso parseint para que sea un numero entero y no una cadena
-            while(cantEntrada<=0 || isNaN(cantEntrada)){ //verifico que la cantidad sea mayor a cero y que sea un numero
-                alert("Ingrese una cantidad valida de entradas que desea comprar");
-                cantEntrada = parseInt(prompt(`Cuantas entradas Campo General quieres comprar?`));
-            }
-            precioParcial = cantEntrada * 10000;
-            precioTotal += precioParcial;
-            console.log(`Has agregado ${cantEntrada} entradas de Campo general al carrito por un total de ${precioParcial}$`);
-            continuarValidacion();
-            break;
-
-        case "2": 
-            cantEntrada = parseInt(prompt(`Cuantas entradas Campo Vip quieres comprar?`)); 
-            while(cantEntrada<=0 || isNaN(cantEntrada)){ //verifico que la cantidad sea mayor a cero y que sea un numero
-                alert("Ingrese una cantidad valida de entradas que desea comprar");
-                cantEntrada = parseInt(prompt(`Cuantas entradas Campo General quieres comprar?`));
-            }
-            precioParcial = cantEntrada * 15000;
-            precioTotal += precioParcial;
-            console.log(`Has agregado ${cantEntrada} entradas de Campo Vip al carrito por un total de ${precioParcial}$`);
-            continuarValidacion();
-            break;
-
-        case "3": 
-            cantEntrada = parseInt(prompt(`Cuantas entradas Platea quieres comprar?`));
-            while(cantEntrada<=0 || isNaN(cantEntrada)){ //verifico que la cantidad sea mayor a cero y que sea un numero
-                alert("Ingrese una cantidad valida de entradas que desea comprar");
-                cantEntrada = parseInt(prompt(`Cuantas entradas Campo General quieres comprar?`));
-            }
-            precioParcial = cantEntrada * 18000;
-            precioTotal += precioParcial;
-            console.log(`Has agregado ${cantEntrada} entradas de Platea al carrito por un total de $${precioParcial}`);
-            continuarValidacion();
-            break;
-        default:
-            alert("ELIJA UNA OPCION VALIDA");    
-    }
+    precioTickets = 0;
+    if (entradas[tipoEntrada]) {
+        cantEntrada = parseInt(prompt(`Cuantas entradas ${entradas[tipoEntrada].nombre} quieres comprar?`));
+        while (cantEntrada <= 0 || isNaN(cantEntrada)) {
+          alert("Ingrese una cantidad válida de entradas que desea comprar");
+          cantEntrada = parseInt(prompt(`Cuantas entradas ${entradas[tipoEntrada].nombre} quieres comprar?`));
+        }
+    
+        precioTickets = cantEntrada * entradas[tipoEntrada].precio;
+        carrito.push(precioTickets); //agrego al array de carrito el valor de la compra actual.
+        alert(`Has agregado ${cantEntrada} entradas de ${entradas[tipoEntrada].nombre} al carrito por un total de ${cantEntrada * entradas[tipoEntrada].precio}$`);
+        console.log(`Se agrego ${cantEntrada} entradas de ${entradas[tipoEntrada].nombre} al carrito por un total de ${cantEntrada * entradas[tipoEntrada].precio}$`);
+        continuarValidacion();
+      } else {
+        alert("ELIJA UNA OPCION VALIDA");
+      }
 }
+console.log(carrito);
+precioTotal = carrito.reduce((acumulador, elemento) => acumulador + elemento, 0); //sumo los elementos que hay en el array carrito y guardo el resultado en precioTotal
+
 alert(`Precio total de las entradas ${precioTotal}`)
 console.log(`Precio final: $${precioTotal} pesos`);
+
+document.getElementById('totalCarrito').textContent = `Carrito - Total: $${precioTotal}`; //muestro en el html el precioTotal del carrito
+
 
 

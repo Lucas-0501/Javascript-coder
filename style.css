@@ -12,3 +12,9 @@ h1{
     margin-left: 40px;
     font-weight: bold;
 }
+#totalCarrito{
+    text-align: end;
+    font-size: 30px;
+    margin-right: 50px;
+    font-weight: bold;
+}
