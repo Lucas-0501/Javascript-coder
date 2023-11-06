@@ -4,19 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
     <h1>Entradas Recital</h1>
-    <h1 id="totalCarrito">Carrito - Total: $</h1>
-    <div class="precios">
-        <h2>Precios</h2>
-        <p>1--Campo general: 10000$</p>
-        <p>2--Campo Vip: 15000$</p>
-        <p>3--Platea: 18000$</p>
-       
+    <div class="container">
+        <div class="mt-5">
+              <!-- primer recital -->
+              <div class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue w-100 my-2 py-3 shadow-sm">
+                <div class="row align-items-center">
+                  <div class="col-12 col-md-4">
+                    <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
+                      Rolling Stones
+                    </h4>
+                  </div>
         
-    </div>
-    <script src="./script.js"></script>
+                  <ul class="list-unstyled mb-0 col-12 col-md-4 text-dark-l1 text-90 text-left my-4 my-md-0">
+                    <li>
+                      <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                      <span>
+                        <span class="text-110">Estadio Unico de la Plata</span>
+                      </span>
+                    </li>
+        
+                    <li class="mt-25">
+                      <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                      <span class="text-110">
+                        2 de marzo 2024
+                    </span>
+                    </li>
+                  </ul>
+        
+                  <div class="col-12 col-md-4 text-center">
+                    <a href="./html/primerRecital.html" class="f-n-hover btn btn-info btn-raised px-4 py-25 w-75 text-600">Comprar entradas</a>
+                  </div>
+                </div>
+        
+              </div>
+        
+        
+        <!-- segundo recital -->
+        <div class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue w-100 my-2 py-3 shadow-sm">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-4">
+                <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
+                  Ciro y los persas
+                </h4>
+              </div>
+    
+              <ul class="list-unstyled mb-0 col-12 col-md-4 text-dark-l1 text-90 text-left my-4 my-md-0">
+                <li>
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                  <span>
+                    <span class="text-110">Estadio Velez Sarfield</span>
+                  </span>
+                </li>
+    
+                <li class="mt-25">
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                  <span class="text-110">
+                    2 de diciembre 2023
+                </span>
+                </li>
+              </ul>
+    
+              <div class="col-12 col-md-4 text-center">
+                <a href="./html/segundoRecital.html" class="f-n-hover btn btn-success btn-raised px-4 py-25 w-75 text-600">Comprar entradas</a>
+              </div>
+            </div>
+    
+          </div>
+        
+        <!-- Tercer recital -->
+        <div class="d-style btn btn-brc-tp border-2 bgc-white btn-outline-blue btn-h-outline-blue btn-a-outline-blue w-100 my-2 py-3 shadow-sm">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-4">
+                <h4 class="pt-3 text-170 text-600 text-primary-d1 letter-spacing">
+                  Taylor Swift
+                </h4>
+              </div>
+    
+              <ul class="list-unstyled mb-0 col-12 col-md-4 text-dark-l1 text-90 text-left my-4 my-md-0">
+                <li>
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                  <span>
+                    <span class="text-110">Estadio Monumental - River Plate</span>
+                  </span>
+                </li>
+    
+                <li class="mt-25">
+                  <i class="fa fa-check text-success-m2 text-110 mr-2 mt-1"></i>
+                  <span class="text-110">
+                    20 de noviembre 2023
+                </span>
+                </li>
+              </ul>
+    
+              <div class="col-12 col-md-4 text-center">
+                <a href="./html/tercerRecital.html" class="f-n-hover btn btn-warning btn-raised px-4 py-25 w-75 text-600">Comprar entradas</a>
+              </div>
+            </div>
+    
+          </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 10px; right: 10px;">
+            <h3>Total Carrito</h3>
+            <p id="totalCarrito">$0.00</p>
+            <button class="btn btn-primary" id="vaciarCarrito">Vaciar carrito</button>
+        </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="./js/main.js""></script>
 </html>
+

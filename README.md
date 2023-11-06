@@ -1,6 +1,9 @@
 # Repositorio Javascript ----> Lucas Aguero
 Sitio en Github pages: https://lucas-0501.github.io/Javascript-coder/
 
+# Pre entrega 3
+* En esta entrega 
+
 ## Pre entrega 2 
 * En esta entrega se añadio un objeto donde se almacena el tipo de entrada y el precio
 * Se reemplazo el switch para determinar cuanto vale el ticket dependiendo de cada entrada por un while donde usa el objeto "entradas", para calcular el precio
