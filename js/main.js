@@ -20,4 +20,4 @@ function actualizarVisualizacionCarrito() {
   
     // Actualiza la visualización del carrito (puedes llamar a tu función actualizarVisualizacionCarrito)
     actualizarVisualizacionCarrito();
-  });
+  }); 

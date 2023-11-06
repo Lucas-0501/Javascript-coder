@@ -83,5 +83,5 @@ btnCarrito.addEventListener("click", function() {
     // Actualiza el valor que se muestra en la pagina
     totCarrito.textContent = "$0.00";
   });
-
+ 
   

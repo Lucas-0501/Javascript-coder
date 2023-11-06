@@ -24,4 +24,4 @@ const form = document.querySelector("form");
           }
         })
         .catch((error) => console.error(error));
-    });
+    }); 
