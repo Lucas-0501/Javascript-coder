@@ -8,6 +8,10 @@ Sitio en Github pages: https://lucas-0501.github.io/Javascript-coder/
 * La información se almacena localmente en el navegador utilizando el almacenamiento local (localStorage) para mantener datos y preferencias.
 * Se realiza manipulación y actualización del DOM para modificar la interfaz de usuario de manera dinámica.
 
+Usuarios guardados en usuarios.json
+* usuario:juan password:321
+* usuario:pepe password:hola
+
 ## Pre entrega 2 
 * En esta entrega se añadio un objeto donde se almacena el tipo de entrada y el precio
 * Se reemplazo el switch para determinar cuanto vale el ticket dependiendo de cada entrada por un while donde usa el objeto "entradas", para calcular el precio
