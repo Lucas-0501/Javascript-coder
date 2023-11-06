@@ -26,3 +26,4 @@ Tambien se agregó una funcion para saber si el usuario quiere seguir comprando 
 Usuarios creados para ingresar mediante el switch:
 * usuario:juan password:321
 * usuario:pepe password:hola
+ 
