@@ -2,7 +2,11 @@
 Sitio en Github pages: https://lucas-0501.github.io/Javascript-coder/
 
 # Pre entrega 3
-* En esta entrega 
+* En esta entrega se usaron eventos para manejar interacciones del usuario, como clics, cambios de estado, etc.
+* Los usuarios pueden ingresar información a través de campos de entrada (inputs) en la interfaz en login.html.
+* Los datos se almacenan y transmiten en formato JSON, lo que facilita la estructuración y manipulación de datos.
+* La información se almacena localmente en el navegador utilizando el almacenamiento local (localStorage) para mantener datos y preferencias.
+* Se realiza manipulación y actualización del DOM para modificar la interfaz de usuario de manera dinámica.
 
 ## Pre entrega 2 
 * En esta entrega se añadio un objeto donde se almacena el tipo de entrada y el precio
